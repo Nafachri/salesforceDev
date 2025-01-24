@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : npz
+ * @group             : 
+ * @last modified on  : 24-01-2025
+ * @last modified by  : npz
+**/
 public class AccountHandler {
     // Mengambil List/Array record object Account
     public static void assignCategory(List<Account> accounts) { 
@@ -12,6 +19,7 @@ public class AccountHandler {
             }
         }
     }
+    
     
     // Mengambil List/Array record object Account
     public static void calculateRevenuePerEmployee(List<Account> accounts) {
