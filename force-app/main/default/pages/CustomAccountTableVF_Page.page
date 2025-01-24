@@ -1,0 +1,12 @@
+<apex:page controller="CustomAccountController">
+    <apex:pageBlock title="Account Data">
+        <apex:pageBlockTable onRowClick="onRowClick" value="{!accounts}" var="acc">
+            <apex:column headerValue="Name">
+                <apex:outputText value="{!acc.Name}"/>
+            </apex:column>
+            <apex:column headerValue="Industry">
+                <apex:outputText value="{!acc.Industry}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

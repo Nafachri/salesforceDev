@@ -1,0 +1,26 @@
+<apex:page standardController="Contact"> 
+    <head>
+        <apex:slds />
+    </head>
+    <div style="margin: 20px;">
+        <apex:form >
+            <apex:outputLabel style="font-weight: 600;">Create New Contact</apex:outputLabel>
+            <div class="slds-form-element"> 
+                <label class="slds-form-element__label" for="form-element-01">First Name</label>
+                <div class="slds-form-element__control">
+                    <apex:inputText id="form-element-01" styleClass="slds-input" value="{!Contact.FirstName}" required="true"/>
+                </div>
+            </div> 
+            <div class="slds-form-element" style="margin-top:8px;">
+                <label class="slds-form-element__label" for="form-element-02">Last Name</label>
+                <div class="slds-form-element__control">
+                    <apex:inputText id="form-element-02" styleClass="slds-input" value="{!Contact.LastName}" required="true" />
+                </div>
+            </div>    
+            <!-- <apex:inputField value="{!Contact.LastName}"/> --> 
+            <div style="display: flex; justify-content:center;margin-top: 20px;" class="">
+                <apex:commandButton style="width:260px;color:pink;" value="Save" action="{!save}"/>
+            </div>
+        </apex:form>
+    </div>    
+</apex:page>

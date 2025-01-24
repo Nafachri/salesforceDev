@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="colorPalette" type="List" default="['red', 'green', 'blue']" />
+    <aura:attribute name="greeting" type="String" default="Hello World"/>
+    <p>{!v.greeting}</p>
+    
+    <ui:button label="Click" press="{!c.handleClick}"/>
+</aura:component>
