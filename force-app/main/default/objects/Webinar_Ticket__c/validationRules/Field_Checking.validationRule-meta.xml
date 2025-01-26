@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_Checking</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( Full_Name__c ) ||  ISBLANK( Email__c )</errorConditionFormula>
+    <errorMessage>Field must be filled</errorMessage>
+</ValidationRule>
