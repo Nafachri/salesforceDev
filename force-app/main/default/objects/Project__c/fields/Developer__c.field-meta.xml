@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Developer__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>This is developer name from object Developer to inform who&apos;s the project developer</description>
+    <label>Developer</label>
+    <referenceTo>Developer__c</referenceTo>
+    <relationshipLabel>Projects</relationshipLabel>
+    <relationshipName>Projects</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
