@@ -1,0 +1,30 @@
+<apex:page controller="ProjectController">
+  <!-- Begin Default Content REMOVE THIS --> 
+  <h1>IDNStar Projects</h1>
+  <apex:pageBlock title="List of Projects">
+      <apex:pageBlockTable value="{!projects}" var="project">
+
+        <apex:column headerValue="Name">
+            <apex:outputText value="{!project.Name}"/>
+        </apex:column>
+        
+        <apex:column headerValue="Project Budget">
+            <apex:outputText value="{!project.Project_Budget__c}"/>
+        </apex:column>
+        
+        <apex:column headerValue="Project Start Date">
+            <apex:outputText value="{!project.Start_Date__c}"/>
+        </apex:column>
+        
+        <apex:column headerValue="Project End Date">
+            <apex:outputText value="{!project.End_Date__c}"/>
+        </apex:column>
+        
+        <apex:column headerValue="Project Status">
+            <apex:outputText value="{!project.Project_Status__c}"/>
+        </apex:column>
+        
+      </apex:pageBlockTable>
+  </apex:pageBlock>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

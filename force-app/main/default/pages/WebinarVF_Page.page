@@ -1,0 +1,18 @@
+<apex:page controller="CustomWebinarTicketController">
+    <apex:pageBlock title="VF Webinar Ticket Data">
+        <apex:pageBlockTable onRowClick="onRowClick" value="{!webinarTickets}" var="webinar">
+            <apex:column headerValue="Name">
+                <apex:outputText value="{!webinar.Name}"/>
+            </apex:column>
+            <apex:column headerValue="Phone">
+                <apex:outputText value="{!webinar.Phone__c}"/>
+            </apex:column>
+            <apex:column headerValue="Email">
+                <apex:outputText value="{!webinar.Email__c}"/>
+            </apex:column>
+            <apex:column headerValue="Ticket Status">
+                <apex:outputText value="{!webinar.Ticket_Status__c}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
