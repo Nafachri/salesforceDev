@@ -44,6 +44,23 @@ try {
 } catch (Exception e) {
     System.debug('Exception during API callout :' + e.getMessage());
 }
+//     Http http = new Http();
+//     HttpRequest request = new HttpRequest();
+//     request.setEndpoint('https://run.mocky.io/v3/023c98ae-ac74-430f-aa45-2f604991db4f');
+//     request.setMethod('GET');
+//     HttpResponse response = http.send(request);
+
+//     if(response.getStatusCode() == 200) {
+//         Map<String, Object> result = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
+
+//         List<Object> webinars = (List<Object>) result.get('webinars');
+    
+//         for(Object webinar: webinars){
+//             System.debug(webinar);
+//         }
+//     }
+//     return response;
+// }
 // DTO class to map the JSON response        
 }
 public class WebinarDTO {

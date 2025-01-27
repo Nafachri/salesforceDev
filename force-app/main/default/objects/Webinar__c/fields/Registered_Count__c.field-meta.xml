@@ -3,7 +3,7 @@
     <fullName>Registered_Count__c</fullName>
     <label>Registered Count</label>
     <summaryFilterItems>
-        <field>Webinar_Ticket__c.Name</field>
+        <field>Webinar_Ticket__c.Ticket_Status__c</field>
         <operation>equals</operation>
         <value>Confirmed</value>
     </summaryFilterItems>
