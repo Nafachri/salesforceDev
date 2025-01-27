@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="LWC Hello World" icon-name="custom:custom14">
+        <div>Hello, {name}!</div>
+    </lightning-card>
+    <lightning-card title="Hello, User!">
+        <div class="slds-var-p-around_medium">
+            <h1>Welcome to my first Lightning Web Component!</h1>
+
+            
+            <lightning-input label="Enter your message" value={inputValue} onchange={handleInputChange}></lightning-input>
+       
+            
+            <p>{dynamicMessage}</p>
+            
+            <lightning-button label="Update Message" onclick={handleClick}></lightning-button>
+        </div>
+    </lightning-card>
+    <div style="margin-top: 20px">
+    <lightning-card title="Project Data">
+        <template if:true={projects}>
+            <lightning-datatable
+                data={projects}
+                columns={columns}
+                key-field="id"
+                hide-checkbox-column="true"
+            ></lightning-datatable>
+        </template>
+            <template if:true={error}>
+               <p>{error.message}</p>
+             </template>
+        </lightning-card>
+    </div>
+</template>
