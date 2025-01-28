@@ -19,6 +19,10 @@
 
 <aura:attribute name="isLoading" type="Boolean" default="false"/>
 
+<!-- Untuk dikirim ke lwc sebagai conditional title dan value modal -->
+<aura:attribute name="modalTitle" type="String" />
+<aura:attribute name="selectedTicket" type="Object" />
+
 <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
 <lightning:card title="Webinar Ticket" variant="Narrow" iconName="standard:water">
@@ -49,6 +53,7 @@
             sortedDirection="{!v.sortDirection}"
             sortedBy="{!v.sortedBy}"
             onsort="{!c.handleSort}"
+            onrowaction="{!c.handleRowAction}"
             />
     </div>
 </lightning:card>
@@ -58,6 +63,8 @@
 
 <aura:if isTrue="{!v.isModalOpen}">
     <c:webinarTicketLWC
+        modalTitle="{!v.modalTitle}"
+        ticket="{!v.selectedTicket}"
         isModalOpen="{!v.isModalOpen}"
         onmodalclose="{!c.closeModal}"
         onticketcreated="{!c.handleTicketCreated}" />
