@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : npz
  * @group             : 
- * @last modified on  : 27-01-2025
+ * @last modified on  : 28-01-2025
  * @last modified by  : npz
 **/
 import { LightningElement, track, api } from 'lwc';
@@ -11,6 +11,8 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class WebinarTicketLWC extends LightningElement {
     @api isModalOpen;
+    @api modalTitle;
+    @api ticket;
     
     @track isShowModal = false;
 
@@ -31,6 +33,9 @@ export default class WebinarTicketLWC extends LightningElement {
             message: 'Webinar Ticket created successfully!',
             variant: 'success'
         });
+        const ticketCreatedEvent = new CustomEvent('ticketcreated');
+
+        this.dispatchEvent(ticketCreatedEvent);
         this.dispatchEvent(toastEvent);
         this.hideModalBox();
     }
