@@ -16,7 +16,7 @@
     <!-- Handlers -->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     
-    <lightning:card title="Aura Webinar Ticket" variant="Narrow" iconName="standard:water">
+    <lightning:card title="Webinar Ticket" variant="Narrow" iconName="standard:water">
         <p class="slds-var-p-horizontal_small">
             This is a combination of Aura Framework and Lightning Web Component
         </p>
