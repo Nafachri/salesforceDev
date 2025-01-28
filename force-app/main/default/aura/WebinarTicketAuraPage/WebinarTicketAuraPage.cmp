@@ -2,7 +2,7 @@
   @description       : 
   @author            : npz
   @group             : 
-  @last modified on  : 27-01-2025
+  @last modified on  : 28-01-2025
   @last modified by  : npz
 -->
 <aura:component controller="WebinarTicketController" implements="flexipage:availableForAllPageTypes,force:appHostable" access="global">
@@ -16,7 +16,10 @@
     <!-- Handlers -->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     
-    <lightning:card title="Aura Webinar Ticket">
+    <lightning:card title="Aura Webinar Ticket" variant="Narrow" iconName="standard:water">
+        <p class="slds-var-p-horizontal_small">
+            This is a combination of Aura Framework and Lightning Web Component
+        </p>
         <div class="slds-var-m-around_medium">
             <div class="slds-grid slds-grid_align-spread">
                 <div></div>
