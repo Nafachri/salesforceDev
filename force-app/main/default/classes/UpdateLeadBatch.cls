@@ -30,5 +30,5 @@ global class UpdateLeadBatch implements Database.Batchable<SObject> {
 
 
 // cara menjalankan batch apexnya
-// UpdateLeadBatch.updateLeads();
-// Databse.executeBatch(new UpdateLeadBatch());
+// UpdateLeadBatch batch = new UpdateLeadBatch();
+// Database.executeBatch(batch, 50); // 50 adalah jumlah record yang di proses per batch
