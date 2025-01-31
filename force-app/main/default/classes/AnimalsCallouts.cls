@@ -6,10 +6,10 @@
  * @last modified by  : npz
 **/
 public class AnimalsCallouts {
-@future(callout=true) //adding future callout for asynchronous callout
+// @future(callout=true) //adding future callout for asynchronous callout
     // CREATING GET METHOD
-    public static void makeGetCallout() { // change from HttpResponse to void
-        try {
+    public static HttpResponse makeGetCallout() { // change from HttpResponse to void
+        // try {
             Http http = new Http();
             HttpRequest request = new HttpRequest();
             request.setEndpoint('https://th-apex-http-callout.herokuapp.com/animals');
@@ -26,10 +26,11 @@ public class AnimalsCallouts {
                     System.debug(animal);
                 }
             }
-            // return response;
-        } catch (Exception error) {
-            System.debug('Callout error: ' + error);
-        }
+            return response;
+        // } 
+        // catch (Exception error) {
+        //     System.debug('Callout error: ' + error);
+        // }
 
     }
     
