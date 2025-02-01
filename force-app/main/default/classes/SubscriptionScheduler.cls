@@ -10,6 +10,18 @@ global class SubscriptionScheduler implements Schedulable{
     // change Subscription Status from 'Open' to 'Close' after 17.00 o'clock
     global void execute(SchedulableContext sc) {
         List<Subscription__c> subscription = new List<Subscription__c>();
-        
+        for(Subscription__c sub : subscription) {
+            if(sub.Time_Status__c == null){
+                if(System.now().time() == Time.newInstance(9, 0, 0, 0)){
+                    sub.Time_Status__c = 'Open';
+                }else if(System.now().time() == Time.newInstance(17, 0, 0, 0)){
+                    sub.Time_Status__c = 'Closed';
+                }
+            } else if (sub.Time_Status__c == 'Closed'){
+                sub.Time_Status__c = 'Open';
+            } else {
+                sub.Time_Status__c = 'Closed';
+            }
+        }
     }
 }
