@@ -17,6 +17,7 @@ for(Subscription__c sub : subscriptions) {
     }else if(sub.Time_Status__c == 'Open' && System.now().time() ==  Time.newInstance(17, 0, 0, 0) ){
             sub.Time_Status__c = 'Closed';
         }
+        //ss
 }
 if(!subscriptions.isEmpty()){
     update subscriptions;
